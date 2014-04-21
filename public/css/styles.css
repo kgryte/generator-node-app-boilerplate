@@ -1,0 +1,16 @@
+
+/* STYLES */
+
+/* Box-Sizing */
+*, *:after, *::before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
