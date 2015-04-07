@@ -262,20 +262,20 @@ Copyright &copy; 2015. Athan Reines.
 
 
 
-[npm-image]: http://img.shields.io/npm/v/generator-compute-io.svg
-[npm-url]: https://npmjs.org/package/generator-compute-io
+[npm-image]: http://img.shields.io/npm/v/generator-node-app-boilerplate.svg
+[npm-url]: https://npmjs.org/package/generator-node-app-boilerplate
 
-[travis-image]: http://img.shields.io/travis/compute-io/generator-compute-io/master.svg
-[travis-url]: https://travis-ci.org/compute-io/generator-compute-io
+[travis-image]: http://img.shields.io/travis/kgryte/generator-node-app-boilerplate/master.svg
+[travis-url]: https://travis-ci.org/kgryte/generator-node-app-boilerplate
 
-[coveralls-image]: https://img.shields.io/coveralls/compute-io/generator-compute-io/master.svg
-[coveralls-url]: https://coveralls.io/r/compute-io/generator-compute-io?branch=master
+[coveralls-image]: https://img.shields.io/coveralls/kgryte/generator-node-app-boilerplate/master.svg
+[coveralls-url]: https://coveralls.io/r/kgryte/generator-node-app-boilerplate?branch=master
 
-[dependencies-image]: http://img.shields.io/david/compute-io/generator-compute-io.svg
-[dependencies-url]: https://david-dm.org/compute-io/generator-compute-io
+[dependencies-image]: http://img.shields.io/david/kgryte/generator-node-app-boilerplate.svg
+[dependencies-url]: https://david-dm.org/kgryte/generator-node-app-boilerplate
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/compute-io/generator-compute-io.svg
-[dev-dependencies-url]: https://david-dm.org/dev/compute-io/generator-compute-io
+[dev-dependencies-image]: http://img.shields.io/david/dev/kgryte/generator-node-app-boilerplate.svg
+[dev-dependencies-url]: https://david-dm.org/dev/kgryte/generator-node-app-boilerplate
 
-[github-issues-image]: http://img.shields.io/github/issues/compute-io/generator-compute-io.svg
-[github-issues-url]: https://github.com/compute-io/generator-compute-io/issues
+[github-issues-image]: http://img.shields.io/github/issues/kgryte/generator-node-app-boilerplate.svg
+[github-issues-url]: https://github.com/kgryte/generator-node-app-boilerplate/issues
