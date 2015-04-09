@@ -300,7 +300,8 @@ var Generator = yeoman.generators.Base.extend({
 		// Finish middleware:
 		this.template( 'app/middleware/finish/_index.js', 'app/middleware/finish/index.js', context );
 
-
+		// Start middleware:
+		this.template( 'app/middleware/start/_index.js', 'app/middleware/start/index.js', context );
 	}, // end METHOD mw()
 
 	/**
