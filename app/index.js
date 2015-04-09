@@ -296,6 +296,11 @@ var Generator = yeoman.generators.Base.extend({
 
 		// Error middleware:
 		this.template( 'app/middleware/error/_index.js', 'app/middleware/error/index.js', context );
+
+		// Finish middleware:
+		this.template( 'app/middleware/finish/_index.js', 'app/middleware/finish/index.js', context );
+
+
 	}, // end METHOD mw()
 
 	/**
