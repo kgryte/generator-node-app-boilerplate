@@ -263,7 +263,7 @@ var Generator = yeoman.generators.Base.extend({
 
 	/**
 	* METHOD: app()
-	*	Creates a boilerplate application.
+	*	Creates a boilerplate application entry-point.
 	*/
 	app: function() {
 		var context = {
@@ -274,8 +274,29 @@ var Generator = yeoman.generators.Base.extend({
 			'year': this.year
 		};
 
-		// this.template( 'lib/_index.js', 'lib/index.js', context );
+		// Application entry-point:
+		this.template( 'app/_index.js', 'app/index.js', context );
 	}, // end METHOD app()
+
+	/**
+	* METHOD: mw()
+	*	Creates application middleware.
+	*/
+	mw: function() {
+		var context = {
+			'name': this.appName,
+			'author': this.author,
+			'email': this.email,
+			'description': this.description,
+			'year': this.year
+		};
+
+		// Middleware entry-point:
+		this.template( 'app/middleware/_index.js', 'app/middleware/index.js', context );
+
+		// Error middleware:
+		this.template( 'app/middleware/error/_index.js', 'app/middleware/error/index.js', context );
+	}, // end METHOD mw()
 
 	/**
 	* METHOD: test()

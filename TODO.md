@@ -20,4 +20,7 @@ TODO
 2. generator
 	-	app
 	- 	tests
-3. 
+3. port and protocol should be cmd-line
+	-	default protocol: 'http'
+	- 	default port: unassigned
+4. 
