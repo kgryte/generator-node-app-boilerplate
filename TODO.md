@@ -23,4 +23,8 @@ TODO
 3. port and protocol should be cmd-line
 	-	default protocol: 'http'
 	- 	default port: unassigned
-4. 
+4. log level should be cmd-line
+5. setting log-level sets only the main log-level
+	-	make more general, as could have other loggers in application
+	-	e.g., mw log level, compute log level, etc
+6. 
