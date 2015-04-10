@@ -302,6 +302,16 @@ var Generator = yeoman.generators.Base.extend({
 
 		// Start middleware:
 		this.template( 'app/middleware/start/_index.js', 'app/middleware/start/index.js', context );
+
+		// Logs middleware:
+		this.template( 'app/middleware/logs/_index.js', 'app/middleware/logs/index.js', context );
+
+		this.template( 'app/middleware/logs/_logs.js', 'app/middleware/logs/logs.js', context );
+
+		this.template( 'app/middleware/logs/_okay.js', 'app/middleware/logs/okay.js', context );
+
+		// Log-level middleware:
+
 	}, // end METHOD mw()
 
 	/**
