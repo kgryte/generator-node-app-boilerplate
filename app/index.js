@@ -320,7 +320,15 @@ var Generator = yeoman.generators.Base.extend({
 		this.template( 'app/middleware/loglevel/_validate.js', 'app/middleware/loglevel/validate.js', context );
 
 		// Monitor middleware:
+		this.template( 'app/middleware/monitor/_index.js', 'app/middleware/monitor/index.js', context );
 
+		this.template( 'app/middleware/monitor/_monitor.js', 'app/middleware/monitor/monitor.js', context );
+
+		this.template( 'app/middleware/monitor/_json.js', 'app/middleware/monitor/json.js', context );
+
+		this.template( 'app/middleware/monitor/plugins/_response_stats.js', 'app/middleware/monitor/plugins/response_stats.js', context );
+
+		this.template( 'app/middleware/monitor/plugins/_response_stats.json', 'app/middleware/monitor/plugins/response_stats.json', context );
 	}, // end METHOD mw()
 
 	/**
