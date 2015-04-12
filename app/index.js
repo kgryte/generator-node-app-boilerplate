@@ -332,6 +332,29 @@ var Generator = yeoman.generators.Base.extend({
 	}, // end METHOD mw()
 
 	/**
+	* METHOD: node_modules()
+	*	Creates application node modules.
+	*/
+	node_modules: function() {
+		var context = {
+			'name': this.appName,
+			'author': this.author,
+			'email': this.email,
+			'description': this.description,
+			'year': this.year
+		};
+
+		// Application node modules...
+		this.template( 'app/node_modules/config/_index.js', 'app/node_modules/config/index.js', context );
+
+		this.template( 'app/node_modules/config/_runners.json', 'app/node_modules/config/runners.json', context );
+
+		this.template( 'app/node_modules/logger/_index.js', 'app/node_modules/logger/index.js', context );
+
+		this.template( 'app/node_modules/server/_index.js', 'app/node_modules/server/index.js', context );
+	}, // end METHOD node_modules()
+
+	/**
 	* METHOD: test()
 	*	Creates a test boilerplate.
 	*/
