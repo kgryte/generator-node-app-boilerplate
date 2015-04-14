@@ -101,8 +101,8 @@ describe( 'node-app-boilerplate', function tests() {
 			'app/middleware/monitor/index.js',
 			'app/middleware/monitor/monitor.js',
 			'app/middleware/monitor/json.js',
-			'app/middleware/monitor/response_stats.js',
-			'app/middleware/monitor/response_stats.json',
+			'app/middleware/monitor/plugins/response_stats.js',
+			'app/middleware/monitor/plugins/response_stats.json',
 
 			// Application config:
 			'app/node_modules/config/index.js',

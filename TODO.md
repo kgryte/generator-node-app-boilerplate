@@ -27,4 +27,6 @@ TODO
 5. setting log-level sets only the main log-level
 	-	make more general, as could have other loggers in application
 	-	e.g., mw log level, compute log level, etc
-6. 
+6. test existing server port => cmd line!!
+7. loglevel test validation => see _test.validate.js
+8. 

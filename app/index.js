@@ -359,12 +359,57 @@ var Generator = yeoman.generators.Base.extend({
 	*	Creates a test boilerplate.
 	*/
 	test: function() {
-		var context = {
-			'name': this.appName
-		};
 
-		// this.template( 'test/_test.js', 'test/test.js', context );
+		// Node modules...
+		this.copy( 'test/app/utils/_test.server.js', 'test/app/utils/test.server.js' );
+
+		// Middleware tests...
+		this.copy( 'test/app/middleware/_test.js', 'test/app/middleware/test.js' );
+
+		// Error middleware:
+		this.copy( 'test/app/middleware/error/_test.js', 'test/app/middleware/error/test.js' );
+
+		// Finish middleware:
+		this.copy( 'test/app/middleware/finish/_test.js', 'test/app/middleware/finish/test.js' );
+
+		// Start middleware:
+		this.copy( 'test/app/middleware/start/_test.js', 'test/app/middleware/start/test.js' );
+
+		// Logs middleware:
+		this.copy( 'test/app/middleware/logs/_test.logs.js', 'test/app/middleware/logs/test.logs.js' );
+
+		this.copy( 'test/app/middleware/logs/_test.okay.js', 'test/app/middleware/logs/test.okay.js' );
+
+		this.copy( 'test/app/middleware/logs/_test.post.js', 'test/app/middleware/logs/test.post.js' );
+
+		// Log level middleware:
+		this.copy( 'test/app/middleware/loglevel/_test.put.js', 'test/app/middleware/loglevel/test.put.js' );
+
+		this.copy( 'test/app/middleware/loglevel/_test.level.js', 'test/app/middleware/loglevel/test.level.js' );
+
+		this.copy( 'test/app/middleware/loglevel/_test.okay.js', 'test/app/middleware/loglevel/test.okay.js' );
+
+		this.copy( 'test/app/middleware/loglevel/_test.validate.js', 'test/app/middleware/loglevel/test.validate.js' );
+
+		// Monitor middleware:
+		this.copy( 'test/app/middleware/monitor/_test.get.js', 'test/app/middleware/monitor/test.get.js' );
+
+		this.copy( 'test/app/middleware/monitor/_test.json.js', 'test/app/middleware/monitor/test.json.js' );
+
+		this.copy( 'test/app/middleware/monitor/_test.monitor.js', 'test/app/middleware/monitor/test.monitor.js' );
+
+		this.copy( 'test/app/middleware/monitor/plugins/_test.response_stats.js', 'test/app/middleware/monitor/plugins/test.response_stats.js' );
+
+		this.copy( 'test/app/middleware/monitor/plugins/_mock.json', 'test/app/middleware/monitor/plugins/mock.json' );
 	}, // end METHOD test()
+
+	/**
+	* METHOD: test_utils()
+	*	Creates test utilities.
+	*/
+	test_utils: function() {
+		this.copy( 'test/utils/_existing_server.js', 'test/utils/existing_server.js' );
+	}, // end METHOD test_utils()
 
 	/**
 	* METHOD: bin()
