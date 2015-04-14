@@ -29,4 +29,7 @@ TODO
 	-	e.g., mw log level, compute log level, etc
 6. test existing server port => cmd line!!
 7. loglevel test validation => see _test.validate.js
-8. 
+8. read dirs, rather than hard code files!!!
+	-	should even be able to do recursively
+		-	if dir, find all files beginning with `_` and copy/template over
+9. 
