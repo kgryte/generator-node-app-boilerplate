@@ -92,12 +92,12 @@ $ make view-cov
 ---
 ## License
 
-[MIT license](http://opensource.org/licenses/MIT). 
+(__UNLICENSED__). 
 
 
 ## Copyright
 
-Copyright &copy; <%= year %>. <%= author %>.
+Copyright &copy; <%= year %>. <%= holder %>.
 
 
 [travis-image]: http://img.shields.io/travis/<%= repo %>/master.svg
