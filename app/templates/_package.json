@@ -52,19 +52,14 @@
 	    "validate.io-string-primitive-array": "^1.0.0"
 	},
 	"devDependencies": {
-		"chai": "2.x.x",
+		"chai": "3.x.x",
 	    "coveralls": "^2.11.1",
 	    "istanbul": "^0.3.5",
 	    "jshint": "2.x.x",
-	    "jshint-stylish": "^1.0.0",
+	    "jshint-stylish": "2.x.x",
 	    "mocha": "2.x.x",
-	    "proxyquire": "^1.4.0",
+	    "proxyquire": "^1.6.0",
 	    "request": "^2.54.0"
 	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://www.opensource.org/licenses/MIT"
-		}
-	]
+	"license": "UNLICENSED"
 }

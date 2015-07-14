@@ -262,7 +262,7 @@ var Generator = yeoman.generators.Base.extend({
 			'title': this.appName,
 			'name': this.appName,
 			'repo': this.repo,
-			'author': this.author,
+			'holder': this.license_holder,
 			'year': this.year,
 			'description': this.description
 		};

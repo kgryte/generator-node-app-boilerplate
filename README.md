@@ -162,7 +162,7 @@ $ make notes
 
 #### License
 
-The default license is the [MIT license](http://opensource.org/licenses/MIT).
+By default, the application is __unlicensed__, and the `LICENSE` file contains a copyright notice.
 
 
 #### Package.json
