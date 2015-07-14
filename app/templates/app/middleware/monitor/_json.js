@@ -1,31 +1,3 @@
-/**
-*
-*	MIDDLEWARE: JSON
-*
-*
-*	DESCRIPTION:
-*		- Returns a JSON response.
-*
-*
-*	NOTES:
-*		[1]
-*
-*
-*	TODO:
-*		[1]
-*
-*
-*	LICENSE:
-*		MIT
-*
-*	Copyright (c) <%= year %>. <%= author %>.
-*
-*
-*	AUTHOR:
-*		<%= author %>. <%= email %>. <%= year %>.
-*
-*/
-
 'use strict';
 
 /**

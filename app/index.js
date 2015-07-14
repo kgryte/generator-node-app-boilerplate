@@ -2,7 +2,9 @@
 
 // MODULES //
 
-var path = require( 'path' ),
+var fs = require( 'fs' ),
+	path = require( 'path' ),
+	dirtree = require( 'dirtree' ),
 	yeoman = require( 'yeoman-generator' ),
 	yosay = require( 'yosay' ),
 	shell = require( 'shelljs' ),
@@ -41,7 +43,7 @@ var Generator = yeoman.generators.Base.extend({
 		var flg = this.options[ 'skip-message' ];
 
 		this.pkg = require( '../package.json' );
-		this.year = (new Date() ).getFullYear();
+		this.year = ( new Date() ).getFullYear();
 
 		if ( typeof flg === 'undefined' || !flg ) {
 			this.log( yosay( 'Welcome to the application boilerplate generator...' ) );
@@ -158,31 +160,28 @@ var Generator = yeoman.generators.Base.extend({
 	*	Creates application directories.
 	*/
 	mkdirs: function() {
-		this.mkdir( 'bin' );
-		this.mkdir( 'etc' );
+		var tree = dirtree(),
+			dirs,
+			len,
+			i;
 
-		// Application:
-		this.mkdir( 'app' );
-		this.mkdir( 'app/middleware' );
-		this.mkdir( 'app/middleware/error' );
-		this.mkdir( 'app/middleware/finish' );
-		this.mkdir( 'app/middleware/loglevel' );
-		this.mkdir( 'app/middleware/logs' );
-		this.mkdir( 'app/middleware/monitor' );
-		this.mkdir( 'app/middleware/monitor/plugins' );
-		this.mkdir( 'app/middleware/start' );
+		// Set the tree root...
+		tree.root( './app/templates' );
 
-		// Tests:
-		this.mkdir( 'test' );
-		this.mkdir( 'test/app' );
-		this.mkdir( 'test/app/middleware' );
-		this.mkdir( 'test/app/middleware/error' );
-		this.mkdir( 'test/app/middleware/finish' );
-		this.mkdir( 'test/app/middleware/loglevel' );
-		this.mkdir( 'test/app/middleware/logs' );
-		this.mkdir( 'test/app/middleware/monitor' );
-		this.mkdir( 'test/app/middleware/monitor/plugins' );
-		this.mkdir( 'test/app/middleware/start' );
+		// Only map the `app` directory:
+		tree.include( 'dirs', /app/ );
+
+		// Create a tree:
+		tree.create();
+
+		// Get all the relative paths:
+		dirs = tree.leaves();
+
+		// Create each directory...
+		len = dirs.length;
+		for ( i = 0; i < len; i++ ) {
+			this.mkdir( 'app/' + dirs[ i ] );
+		}
 	}, // end METHOD mkdirs()
 
 	/**
@@ -190,13 +189,23 @@ var Generator = yeoman.generators.Base.extend({
 	*	Copies over base dot files.
 	*/
 	dotFiles: function() {
-		this.copy( 'gitignore', '.gitignore' );
-		this.copy( 'gitattributes', '.gitattributes' );
-		this.copy( 'npmignore', '.npmignore' );
-		this.copy( 'travis.yml', '.travis.yml' );
-		this.copy( 'jshintrc', '.jshintrc' );
-		this.copy( 'jshintignore', '.jshintignore' );
-		this.copy( 'editorconfig', '.editorconfig' );
+		var tree = dirtree(),
+			files,
+			name,
+			len,
+			i;
+
+		tree.root( './app/templates' );
+
+		tree.exclude( 'dirs', /.*/ );
+		tree.exclude( 'files', /^_/ );
+
+		files = tree.leaves();
+
+		for ( i = 0; i < len; i++ ) {
+			name = files[ i ];
+			this.copy( name, '.' + name );
+		}
 	}, // end METHOD dotfiles()
 
 	/**
@@ -266,16 +275,7 @@ var Generator = yeoman.generators.Base.extend({
 	*	Creates a boilerplate application entry-point.
 	*/
 	app: function() {
-		var context = {
-			'name': this.appName,
-			'author': this.author,
-			'email': this.email,
-			'description': this.description,
-			'year': this.year
-		};
-
-		// Application entry-point:
-		this.template( 'app/_index.js', 'app/index.js', context );
+		this.copy( 'app/_index.js', 'app/index.js' );
 	}, // end METHOD app()
 
 	/**
@@ -283,14 +283,6 @@ var Generator = yeoman.generators.Base.extend({
 	*	Creates application middleware.
 	*/
 	mw: function() {
-		var context = {
-			'name': this.appName,
-			'author': this.author,
-			'email': this.email,
-			'description': this.description,
-			'year': this.year
-		};
-
 		// Middleware entry-point:
 		this.template( 'app/middleware/_index.js', 'app/middleware/index.js', context );
 

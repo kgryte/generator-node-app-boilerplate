@@ -65,7 +65,10 @@ describe( 'node-app-boilerplate', function tests() {
 			'package.json',
 
 			// Bin directory:
-			'bin/server',
+			'bin/cli',
+			'bin/opts.json',
+			'bin/usage.txt',
+			'bin/validate.js',
 
 			// etc directory:
 			'etc/dev.json',
@@ -73,6 +76,9 @@ describe( 'node-app-boilerplate', function tests() {
 
 			// Application entry-point:
 			'app/index.js',
+
+			// Application server:
+			'app/server/index.js',
 
 			// Middleware entry-point:
 			'app/middleware/index.js',
@@ -106,16 +112,25 @@ describe( 'node-app-boilerplate', function tests() {
 
 			// Application config:
 			'app/node_modules/config/index.js',
-			'app/node_modules/config/runners.json',
+			'app/node_modules/config/default.json',
 
 			// Application logger:
 			'app/node_modules/logger/index.js',
 
-			// Application server:
-			'app/node_modules/server/index.js',
+			// Application root:
+			'app/node_modules/root/index.js',
+			'app/node_modules/root/runner.json',
+
+			// Test fixtures:
+			'test/fixtures/agent2-cert.pem',
+			'test/fixtures/agent2-key.pem',
 
 			// Tests:
-			'test/utils/existing_server.js',
+			'test/app/test.js',
+
+			'test/app/server/test.js',
+
+			'test/app/middleware/test.js',
 
 			'test/app/middleware/error/test.js',
 
@@ -137,9 +152,7 @@ describe( 'node-app-boilerplate', function tests() {
 			'test/app/middleware/monitor/plugins/mock.json',
 			'test/app/middleware/monitor/plugins/test.response_stats.js',
 
-			'test/app/middleware/start/test.js',
-
-			'test/app/utils/test.server.js'
+			'test/app/middleware/start/test.js'
 		];
 
 		helpers.assertFile( expected );

@@ -1,31 +1,3 @@
-/**
-*
-*	MIDDLEWARE: error
-*
-*
-*	DESCRIPTION:
-*		- Generic error handling middleware.
-*
-*
-*	NOTES:
-*		[1]
-*
-*
-*	TODO:
-*		[1]
-*
-*
-*	LICENSE:
-*		MIT
-*
-*	Copyright (c) <%= year %>. <%= author %>.
-*
-*
-*	AUTHOR:
-*		<%= author %>. <%= email %>. <%= year %>.
-*
-*/
-
 'use strict';
 
 /**

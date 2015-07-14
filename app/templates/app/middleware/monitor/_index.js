@@ -1,31 +1,3 @@
-/**
-*
-*	ROUTES: GET /monitor
-*
-*
-*	DESCRIPTION:
-*		- Returns the application status and associated runtime statistics.
-*
-*
-*	NOTES:
-*		[1]
-*
-*
-*	TODO:
-*		[1]
-*
-*
-*	LICENSE:
-*		MIT
-*
-*	Copyright (c) <%= year %>. <%= author %>.
-*
-*
-*	AUTHOR:
-*		<%= author %>. <%= email %>. <%= year %>.
-*
-*/
-
 'use strict';
 
 // MIDDLEWARE //

@@ -16,20 +16,19 @@ TODO
 
 ### General
 
-1. confirm deps
+1. 
 2. generator
 	-	app
 	- 	tests
-3. port and protocol should be cmd-line
-	-	default protocol: 'http'
-	- 	default port: unassigned
-4. log level should be cmd-line
+3. 
+4. 
 5. setting log-level sets only the main log-level
 	-	make more general, as could have other loggers in application
 	-	e.g., mw log level, compute log level, etc
-6. test existing server port => cmd line!!
-7. loglevel test validation => see _test.validate.js
+6. 
+7. 
 8. read dirs, rather than hard code files!!!
 	-	should even be able to do recursively
 		-	if dir, find all files beginning with `_` and copy/template over
-9. 
+9. include load testing suite
+10. 

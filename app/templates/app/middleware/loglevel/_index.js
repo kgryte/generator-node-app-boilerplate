@@ -1,31 +1,3 @@
-/**
-*
-*	ROUTES: PUT /loglevel
-*
-*
-*	DESCRIPTION:
-*		- Route for setting the runtime log level.
-*
-*
-*	NOTES:
-*		[1]
-*
-*
-*	TODO:
-*		[1]
-*
-*
-*	LICENSE:
-*		MIT
-*
-*	Copyright (c) <%= year %>. <%= author %>.
-*
-*
-*	AUTHOR:
-*		<%= author %>. <%= email %>. <%= year %>.
-*
-*/
-
 'use strict';
 
 // MIDDLEWARE //

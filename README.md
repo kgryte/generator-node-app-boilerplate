@@ -61,10 +61,10 @@ The initialization process stops short of pushing the commit to the remote repos
 
 If you elected to initialize a local Git repository, you must specify the corresponding remote repository __path__.
 
-__Note__: a repository path __must__ include the `user`/`organization` name to which the repository belongs. For example,
+__Note__: a repository path __must__ include the `user` or `organization` name to which the repository belongs. For example,
 
 ```
-'my-org/new-application'
+my-org/new-application
 ```
 
 
@@ -107,12 +107,17 @@ app/
 		- start/
 		- index.js
 	- node_modules/
+	- server/
 	- index.js
 bin/
-	- server
+	- cli
+	- opts.json
+	- usage.txt
+	- validate.js
 etc/
 	- dev.json
 	- test.json
+examples/
 test/
 	- app/
 		- middleware/
@@ -123,8 +128,8 @@ test/
 			- monitor/
 			- start/
 			- test.js
-		- utils/
-	- utils/
+		- server/
+	- fixtures/
 .gitignore
 .gitattributes
 .npmignore
@@ -185,6 +190,11 @@ The `bin` directory contains the application executable.
 #### Etc
 
 The `etc` directory contains stubbed configuration files. Where possible, prefer command-line options over configuration files.
+
+
+#### Examples
+
+An empty directory for creating examples which use the server API.
 
 
 #### Test
