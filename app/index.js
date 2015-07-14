@@ -166,7 +166,7 @@ var Generator = yeoman.generators.Base.extend({
 			i;
 
 		// Set the tree root...
-		tree.root( './app/templates' );
+		tree.root( __dirname + '/templates' );
 
 		// Only map the `app` directory:
 		tree.include( 'dirs', /app/ );
@@ -195,7 +195,7 @@ var Generator = yeoman.generators.Base.extend({
 			len,
 			i;
 
-		tree.root( './app/templates' );
+		tree.root( __dirname + '/templates' );
 
 		tree.exclude( 'dirs', /.*/ );
 		tree.exclude( 'files', /^_/ );
