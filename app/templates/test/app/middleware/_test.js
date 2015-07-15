@@ -26,6 +26,7 @@ describe( 'app/middleware', function tests() {
 
 	var app = {
 		'use': function use(){},
+		'disable': function disable(){},
 		'get': function get(){},
 		'post': function post(){},
 		'put': function put(){}
