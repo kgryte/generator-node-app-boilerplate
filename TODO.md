@@ -16,11 +16,11 @@ TODO
 
 ### General
 
-1. 
+1. add clustering functionality
 2. generator
 	-	app
 	- 	tests
-3. 
+3. add graceful shutdown (signals)
 4. 
 5. setting log-level sets only the main log-level
 	-	make more general, as could have other loggers in application
